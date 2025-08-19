@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark" data-theme="violet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReelStar: Private Investment Memorandum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root, [data-theme="violet"] {
+            --background: 240 10% 4%;
+            --foreground: 0 0% 98%;
+            --card: 240 10% 10%;
+            --card-foreground: 0 0% 98%;
+            --popover: 240 10% 4%;
+            --popover-foreground: 0 0% 98%;
+            --primary: 248 89% 60%;
+            --primary-foreground: 0 0% 98%;
+            --secondary: 240 5% 16%;
+            --secondary-foreground: 0 0% 98%;
+            --muted: 240 5% 16%;
+            --muted-foreground: 240 5% 65%;
+            --accent: 248 95% 65%;
+            --accent-foreground: 0 0% 98%;
+            --destructive: 0 62.8% 30.6%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 240 5% 20%;
+            --input: 240 5% 20%;
+            --ring: 248 89% 60%;
+            --radius: 0.75rem;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: hsl(var(--foreground));
+             background-image: radial-gradient(circle at top right, hsl(var(--primary) / 0.15), transparent 40%), radial-gradient(circle at bottom left, hsl(var(--accent) / 0.1), transparent 50%), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 100 100'%3e%3cg fill='white' opacity='0.03'%3e%3cg transform='translate(50 50) scale(0.45) translate(-50 -50)'%3e%3cpath d='M50,0 L60,40 L100,50 L60,60 L50,100 L40,60 L0,50 L40,40 Z' /%3e%3cpath d='M50,20 L80,50 L50,80 L20,50 Z' /%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+        }
+        .font-headline {
+            font-family: 'Poppins', sans-serif;
+        }
+        .text-primary-outline {
+            -webkit-text-stroke: 1px hsl(var(--primary));
+            color: transparent;
+        }
+        .text-glow {
+            text-shadow: 0 0 8px hsl(var(--primary) / 0.5), 0 0 20px hsl(var(--primary) / 0.3);
+        }
+        .pillar-group, .bridge-path {
+            opacity: 0;
+            animation: fadeInPillar 1s ease-out forwards;
+        }
+        @keyframes fadeInPillar {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        body: ['Inter', 'sans-serif'],
+                        headline: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        background: 'hsl(var(--background))',
+                        foreground: 'hsl(var(--foreground))',
+                        card: 'hsl(var(--card))',
+                        'card-foreground': 'hsl(var(--card-foreground))',
+                        popover: 'hsl(var(--popover))',
+                        'popover-foreground': 'hsl(var(--popover-foreground))',
+                        primary: 'hsl(var(--primary))',
+                        'primary-foreground': 'hsl(var(--primary-foreground))',
+                        secondary: 'hsl(var(--secondary))',
+                        'secondary-foreground': 'hsl(var(--secondary-foreground))',
+                        muted: 'hsl(var(--muted))',
+                        'muted-foreground': 'hsl(var(--muted-foreground))',
+                        accent: 'hsl(var(--accent))',
+                        'accent-foreground': 'hsl(var(--accent-foreground))',
+                        destructive: 'hsl(var(--destructive))',
+                        'destructive-foreground': 'hsl(var(--destructive-foreground))',
+                        border: 'hsl(var(--border))',
+                        input: 'hsl(var(--input))',
+                        ring: 'hsl(var(--ring))',
+                    },
+                    borderRadius: {
+                        lg: "var(--radius)",
+                        md: "calc(var(--radius) - 2px)",
+                        sm: "calc(var(--radius) - 4px)",
+                    },
+                }
+            }
+        }
+        // Basic script to ensure dark mode class is present
+        document.addEventListener('DOMContentLoaded', () => {
+            document.documentElement.classList.add('dark');
+            document.documentElement.dataset.theme = 'violet';
+        });
+    </script>
+</head>
+<body class="antialiased">
+    <div class="max-w-4xl mx-auto p-4 sm:p-8 space-y-6 font-sans">
+        <div class="bg-card/70 backdrop-blur-sm border-primary/20 rounded-lg">
+            <div class="flex flex-col items-center justify-center min-h-[50vh] p-8 text-center">
+                <div class="flex items-center justify-center lg:justify-start gap-2 mb-8">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="w-24 h-24">
+                      <defs>
+                        <radialGradient id="mainGradient" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+                          <stop offset="0%" stop-color="hsl(var(--accent))" stop-opacity="0.8"></stop>
+                          <stop offset="70%" stop-color="hsl(var(--primary))"></stop>
+                          <stop offset="100%" stop-color="hsl(274 100% 5%)"></stop>
+                        </radialGradient>
+                        <radialGradient id="starGradient" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="hsl(var(--primary-foreground))" stop-opacity="1"></stop>
+                            <stop offset="75%" stop-color="hsl(var(--primary-foreground))" stop-opacity="0.8"></stop>
+                            <stop offset="100%" stop-color="hsl(var(--primary-foreground))" stop-opacity="0.6"></stop>
+                        </radialGradient>
+                      </defs>
+                      <g>
+                        <circle cx="50" cy="50" r="48" fill="url(#mainGradient)"></circle>
+                        <circle cx="50" cy="50" r="42" fill="none" stroke="hsl(var(--accent))" stroke-opacity="0.3" stroke-width="1.5"></circle>
+                        <g transform="translate(50 50) scale(0.45) translate(-50 -50)">
+                             <path d="M50,0 L60,40 L100,50 L60,60 L50,100 L40,60 L0,50 L40,40 Z" fill="url(#starGradient)" stroke="hsl(var(--primary-foreground))" stroke-opacity="0.5" stroke-width="1" stroke-linejoin="round"></path>
+                             <path d="M50,20 L80,50 L50,80 L20,50 Z" fill="url(#starGradient)" stroke="hsl(var(--primary-foreground))" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </g>
+                        <circle cx="50" cy="50" r="48.5" fill="none" stroke="#FF69B4" stroke-width="1"></circle>
+                        <circle cx="50" cy="50" r="47" fill="none" stroke="#FFFF00" stroke-width="1"></circle>
+                        <path d="M 15 25 A 50 50 0 0 1 85 25" stroke="hsl(var(--primary-foreground))" stroke-width="1.5" stroke-opacity="0.5" fill="none"></path>
+                      </g>
+                    </svg>
+                    <div class="flex flex-col items-center">
+                    <h1 class="text-4xl sm:text-5xl font-headline font-black">
+                        <span class="flex items-baseline text-primary-outline">
+                        <span>ReelStar</span><span class="text-[0.375em] ml-px">&copy;</span>
+                        </span>
+                    </h1>
+                    <span class="block text-xs text-muted-foreground tracking-tight -mt-2">
+                        Where Influencers Reign
+                    </span>
+                    </div>
+                </div>
+                <h1 class="text-4xl font-headline font-bold text-center text-muted-foreground">Private Investment Memorandum</h1>
+                <p class="text-center text-muted-foreground text-sm mt-2">This is a tokenized influence social ai engine. Purposely built for the influencer-content creator of tomorrow.</p>
+                <p class="mt-4 text-xs text-muted-foreground/80 text-center">Highly Confidential</p>
+                <div class="mt-2 text-xs text-muted-foreground/80 text-center">
+                    <p>Prepared by: Angelo Ioannou, Developer, Architect, Founder of ReelStar</p>
+                    <p>Entity: Affinity Magnate, Inc. / Ai NFT Lab</p>
+                </div>
+                <p class="text-xs text-muted-foreground/80 text-center">Date: July 21, 2025</p>
+            </div>
+        </div>
+        <!-- All other sections from whitepaper/page.tsx would go here, converted to pure HTML and Tailwind -->
+        <!-- This is a sample of one section to show the conversion -->
+        <div class="scroll-mt-20 bg-card/70 backdrop-blur-sm border-primary/20 rounded-lg">
+            <div class="p-6 text-center">
+                <h3 class="text-lg font-sans font-semibold">Executive Summary: The Inevitable Future of Influence</h3>
+            </div>
+            <div class="p-6 pt-0 space-y-4 text-lg text-foreground/80 font-sans">
+                <p>You are invited to participate in a landmark investment opportunity—a chance to secure a foundational stake in the company that will define the next decade of the Social AI Media Creator/Influencer Economy. We are seeking **$1 billion** for **25% equity** in ReelStar.</p>
+                <p class="font-semibold text-foreground">This is not a pitch for a concept. A full-scale, functional prototype of ReelStar is complete. The technology and IP, in their current state, are valued at over $100 million. It is, by every metric, light years ahead of the market. While legacy tech giants build skyscrapers, we have the tools—leveraging Google's AI and a hyper-scalable cloud architecture—to build moon scrapers. This investment is not to test a hypothesis; it is to fuel a global thermonuclear launch.</p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
+
+    
